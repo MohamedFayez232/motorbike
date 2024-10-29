@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة المنتجات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>متجر المنتجات</h1>
+    </header>
+    <main>
+        <section class="product-list">
+            <div class="product-card" onclick="showDetails('product1')">
+                <img src="product1.jpg" alt="منتج 1">
+                <h2>منتج 1</h2>
+                <p>سعر: 100 جنيه</p>
+                <button>عرض التفاصيل</button>
+            </div>
+            <div class="product-card" onclick="showDetails('product2')">
+                <img src="product2.jpg" alt="منتج 2">
+                <h2>منتج 2</h2>
+                <p>سعر: 150 جنيه</p>
+                <button>عرض التفاصيل</button>
+            </div>
+            <!-- أضف المزيد من المنتجات هنا -->
+        </section>
+        <div id="product-details" class="modal">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div class="modal-content" id="modal-content">
+                <!-- تفاصيل المنتج ستظهر هنا -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>حقوق النشر © 2024 متجر المنتجات</p>
+        <p>معلومات الشحن: نقوم بالشحن لجميع المناطق.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
