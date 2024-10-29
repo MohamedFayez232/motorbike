@@ -13,8 +13,9 @@ header, footer {
 
 .products {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* يسمح بلف العناصر إلى سطر جديد عند الحاجة */
+    justify-content: center; /* يركز العناصر في منتصف الصفحة */
+    margin: 20px;
 }
 
 .product {
@@ -23,4 +24,18 @@ header, footer {
     margin: 10px;
     padding: 10px;
     text-align: center;
+    width: calc(33.333% - 20px); /* عرض كل منتج 33.33% مع ترك مساحة بين العناصر */
+    box-sizing: border-box; /* يحسب الحشوة والحدود ضمن العرض الإجمالي */
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* على الشاشات الصغيرة، يعرض منتجين في كل سطر */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* على الشاشات الأصغر، يعرض منتجًا واحدًا في كل سطر */
+    }
 }
