@@ -1,42 +1,26 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة المنتجات</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>متجر المنتجات</h1>
-    </header>
-    <main>
-        <section class="product-list">
-            <div class="product-card" onclick="showDetails('product1')">
-                <img src="images/product1.jpg" alt="منتج 1">
-                <h2>منتج 1</h2>
-                <p>سعر: 100 جنيه</p>
-                <button>عرض التفاصيل</button>
-            </div>
-            <div class="product-card" onclick="showDetails('product2')">
-                <img src="https://cdn.pixabay.com/photo/2020/07/24/07/16/motorcycle-5433115_960_720.jpg" alt="Centered Cropped Image">
-                <h2>منتج 2</h2>
-                <p>سعر: 150 جنيه</p>
-                <button>عرض التفاصيل</button>
-            </div>
-            <!-- أضف المزيد من المنتجات هنا -->
-        </section>
-        <div id="product-details" class="modal" onclick="closeDetails(event)">
-            <span class="close" onclick="closeDetails(event)">&times;</span>
-            <div class="modal-content" id="modal-content">
-                <!-- تفاصيل المنتج ستظهر هنا -->
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>حقوق النشر © 2024 متجر المنتجات</p>
-        <p>معلومات الشحن: نقوم بالشحن لجميع المناطق.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="product-grid">
+    <div class="product-item">
+        <img src="knife-set.jpg" alt="طقم التقطيع الفولاذ">
+        <h3>طقم التقطيع الفولاذ (جديد)</h3>
+        <p class="old-price">600 ر.س</p>
+        <p class="new-price">349 ر.س</p>
+    </div>
+    <div class="product-item">
+        <img src="lightning-shirt.jpg" alt="تيشيرت البرق">
+        <h3>تيشيرت البرق (جديد)</h3>
+        <p class="old-price">329 ر.س</p>
+        <p class="new-price">179 ر.س</p>
+    </div>
+    <div class="product-item">
+        <img src="portable-blender.jpg" alt="خلاط صغير محمول">
+        <h3>خلاط صغير محمول (جديد)</h3>
+        <p class="old-price">200 ر.س</p>
+        <p class="new-price">145 ر.س</p>
+    </div>
+    <div class="product-item">
+        <img src="c10-set.jpg" alt="ترينج C10">
+        <h3>ترينج C10 (جديد)</h3>
+        <p class="old-price">220 ر.س</p>
+        <p class="new-price">199 ر.س</p>
+    </div>
+</div>
