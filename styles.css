@@ -13,8 +13,8 @@
 }
 
 .image-container {
-    width: 300px; /* Set desired width */
-    height: 200px; /* Set desired height */
+    width: 60px; /* Set desired width */
+    height: 60px; /* Set desired height */
     overflow: hidden; /* Crop overflow */
 }
 
