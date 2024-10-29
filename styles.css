@@ -1,70 +1,45 @@
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    direction: rtl; /* تعيين اتجاه الكتابة إلى اليمين */
 }
 
-header {
-    background-color: #f2f2f2;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 15px;
 }
 
-.product-list {
-    display: flex; /* استخدام flexbox */
-    justify-content: center;
-    flex-wrap: wrap; /* السماح للعناصر بالتوزيع في أكثر من سطر */
-}
-
-.product-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    width: 80px; /* عرض محدد لكل عنصر */
-    height: 80px; /* ارتفاع محدد لكل عنصر */
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
-}
-
-.product-card img {
-    width: 50%; /* اجعل الصورة تأخذ عرض البطاقة بالكامل */
-    height: 80px; /* ارتفاع محدد للصورة */
-    object-fit: cover; /* تأكد من ملاءمة الصورة للعنصر */
-    border-radius: 5px 5px 0 0; /* إضفاء الزوايا المنحنية على الجزء العلوي من الصورة */
-}
-
-.modal {
-    display: none; /* إخفاء النافذة المنبثقة */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.product-item img {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* خلفية مظللة */
+    border-radius: 8px;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+.product-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+.old-price {
+    font-size: 14px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 18px;
+    color: #e60023;
     font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
