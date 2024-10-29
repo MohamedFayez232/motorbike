@@ -12,6 +12,13 @@
     padding: 20px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* المسافة بين العناصر */
+}
+
+
 .product-item {
     background-color: #fff;
     border-radius: 8px;
