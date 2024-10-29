@@ -10,9 +10,9 @@ header {
 }
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* استخدام flexbox */
     justify-content: center;
+    flex-wrap: wrap; /* السماح للعناصر بالتوزيع في أكثر من سطر */
 }
 
 .product-card {
@@ -20,9 +20,18 @@ header {
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    width: 80px;
+    width: 150px; /* عرض محدد لكل عنصر */
+    height: 250px; /* ارتفاع محدد لكل عنصر */
     text-align: center;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
+}
+
+.product-card img {
+    width: 100%; /* اجعل الصورة تأخذ عرض البطاقة بالكامل */
+    height: 150px; /* ارتفاع محدد للصورة */
+    object-fit: cover; /* تأكد من ملاءمة الصورة للعنصر */
+    border-radius: 5px 5px 0 0; /* إضفاء الزوايا المنحنية على الجزء العلوي من الصورة */
 }
 
 .modal {
@@ -34,7 +43,7 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4); /* خلفية مظللة */
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية مظللة */
 }
 
 .modal-content {
