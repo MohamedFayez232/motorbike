@@ -11,6 +11,9 @@ function showDetails(product) {
     document.getElementById('product-details').style.display = 'block';
 }
 
-function closeDetails() {
-    document.getElementById('product-details').style.display = 'none';
+function closeDetails(event) {
+    // تحقق مما إذا كان العنصر الذي تم النقر عليه هو النافذة المنبثقة أو أيقونة الإغلاق
+    if (event.target === document.getElementById('product-details') || event.target.className === 'close') {
+        document.getElementById('product-details').style.display = 'none';
+    }
 }
