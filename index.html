@@ -13,21 +13,21 @@
     <main>
         <section class="product-list">
             <div class="product-card" onclick="showDetails('product1')">
-                <img src="product1.jpg" alt="منتج 1">
+                <img src="images/product1.jpg" alt="منتج 1">
                 <h2>منتج 1</h2>
                 <p>سعر: 100 جنيه</p>
                 <button>عرض التفاصيل</button>
             </div>
             <div class="product-card" onclick="showDetails('product2')">
-                <img src="product2.jpg" alt="منتج 2">
+                <img src="images/product2.jpg" alt="منتج 2">
                 <h2>منتج 2</h2>
                 <p>سعر: 150 جنيه</p>
                 <button>عرض التفاصيل</button>
             </div>
             <!-- أضف المزيد من المنتجات هنا -->
         </section>
-        <div id="product-details" class="modal">
-            <span class="close" onclick="closeDetails()">&times;</span>
+        <div id="product-details" class="modal" onclick="closeDetails(event)">
+            <span class="close" onclick="closeDetails(event)">&times;</span>
             <div class="modal-content" id="modal-content">
                 <!-- تفاصيل المنتج ستظهر هنا -->
             </div>
